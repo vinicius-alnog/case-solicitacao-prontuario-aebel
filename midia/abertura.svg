@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-label="Portal de Solicitação de Prontuário do SAME, Hospital Evangélico de Londrina">
+<style>text{font-family:Arial, Helvetica, sans-serif}</style>
+<rect x="0" y="0" width="1200" height="400" fill="#0073A9"/>
+<text x="60" y="88" font-size="14" fill="#8CE6E9" font-weight="700" letter-spacing="1.7">ESTUDO DE CASO</text><text x="60" y="132" font-size="40" fill="#FFFFFF" font-weight="700">Portal de Solicitação de Prontuário</text><text x="60" y="176" font-size="18" fill="#C5E3F2">Serviço de Arquivo Médico e Estatística do Hospital Evangélico de Londrina.</text><text x="60" y="201" font-size="18" fill="#C5E3F2">Em produção desde agosto de 2026, com 200 solicitações atendidas.</text><text x="60" y="268" font-size="14" fill="#7FB6D8">Node.js · Express · Oracle · Knex · JWT · Multer · Socket.IO · node-cron · Jest · Supertest</text><rect x="0" y="354" width="1200" height="46" fill="#00427E"/><text x="60" y="382" font-size="13" fill="#FFFFFF" font-weight="700">Hospital Evangélico de Londrina · AEBEL</text><text x="1140" y="382" font-size="12.5" fill="#BEDDEF" text-anchor="end">36 rotas · 15 tabelas · 18 telas · 42 arquivos de teste</text>
+</svg>

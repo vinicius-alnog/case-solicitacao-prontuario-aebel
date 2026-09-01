@@ -1,0 +1,88 @@
+{
+  "_aviso": "Exemplo sintetico, criado para este estudo de caso. Ilustra o formato conceitual de uma trilha somente-inclusao: cada linha registra acao, autor, momento e origem, e nenhuma pode ser alterada depois de gravada. Nao reproduz o esquema real da tabela de auditoria. Nenhum dado de pessoa real aparece aqui.",
+
+  "protocolo": "SME-2026-000128",
+  "registros": [
+    {
+      "sequencia": 1,
+      "acao": "SOLICITACAO_CRIADA",
+      "em": "2026-08-12T09:14:00-03:00",
+      "autorTipo": "SOLICITANTE",
+      "autor": "cpf-informado-na-abertura",
+      "origem": "203.0.113.10",
+      "detalhe": "Rascunho aberto pelo fluxo publico, sem sessao"
+    },
+    {
+      "sequencia": 2,
+      "acao": "ANEXO_RECEBIDO",
+      "em": "2026-08-12T09:31:00-03:00",
+      "autorTipo": "SOLICITANTE",
+      "autor": "cpf-informado-na-abertura",
+      "origem": "203.0.113.10",
+      "detalhe": "Tipo SELFIE_COM_DOCUMENTO, conteudo conferido no recebimento"
+    },
+    {
+      "sequencia": 3,
+      "acao": "SOLICITACAO_FINALIZADA",
+      "em": "2026-08-12T09:52:00-03:00",
+      "autorTipo": "SOLICITANTE",
+      "autor": "cpf-informado-na-abertura",
+      "origem": "203.0.113.10",
+      "detalhe": "Credenciais de acesso geradas e enviadas por e-mail"
+    },
+    {
+      "sequencia": 4,
+      "acao": "LOGIN_FALHOU",
+      "em": "2026-08-12T10:04:00-03:00",
+      "autorTipo": "SOLICITANTE",
+      "autor": "usuario-informado",
+      "origem": "203.0.113.44",
+      "detalhe": "Senha incorreta. Tentativa registrada e contabilizada no limite"
+    },
+    {
+      "sequencia": 5,
+      "acao": "ANEXO_RECUSADO",
+      "em": "2026-08-12T14:41:00-03:00",
+      "autorTipo": "COLABORADOR_SAME",
+      "autor": "matricula-institucional",
+      "origem": "198.51.100.7",
+      "detalhe": "DOCUMENTO_VERSO: imagem cortada, rodape ilegivel"
+    },
+    {
+      "sequencia": 6,
+      "acao": "DOCUMENTACAO_APROVADA",
+      "em": "2026-08-12T15:02:00-03:00",
+      "autorTipo": "COLABORADOR_SAME",
+      "autor": "matricula-institucional",
+      "origem": "198.51.100.7",
+      "detalhe": "Solicitacao encaminhada para atendimento"
+    },
+    {
+      "sequencia": 7,
+      "acao": "RESPOSTA_ANEXADA",
+      "em": "2026-08-18T11:37:00-03:00",
+      "autorTipo": "COLABORADOR_SAME",
+      "autor": "matricula-institucional",
+      "origem": "198.51.100.7",
+      "detalhe": "Arquivo compactado disponibilizado, janela de download iniciada"
+    },
+    {
+      "sequencia": 8,
+      "acao": "RESPOSTA_BAIXADA",
+      "em": "2026-08-19T14:22:00-03:00",
+      "autorTipo": "SOLICITANTE",
+      "autor": "usuario-do-portal",
+      "origem": "203.0.113.10",
+      "detalhe": "Primeiro download registrado"
+    },
+    {
+      "sequencia": 9,
+      "acao": "ARQUIVO_EXPIRADO",
+      "em": "2026-08-29T03:00:00-03:00",
+      "autorTipo": "ROTINA_AGENDADA",
+      "autor": "rotina-de-retencao",
+      "origem": "interno",
+      "detalhe": "Janela de download encerrada; contagem para remocao definitiva iniciada"
+    }
+  ]
+}

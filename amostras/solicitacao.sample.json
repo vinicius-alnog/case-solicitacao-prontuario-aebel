@@ -1,0 +1,78 @@
+{
+  "_aviso": "Exemplo sintetico, criado para este estudo de caso. Nao reproduz o contrato real da API nem o esquema do banco: os nomes de campo abaixo sao conceituais e servem apenas para ilustrar o vocabulario do dominio. Nenhum dado de pessoa real aparece aqui.",
+
+  "protocolo": "SME-2026-000128",
+  "situacao": "RESPONDIDA",
+  "abertaEm": "2026-08-12T09:14:00-03:00",
+  "finalizadaEm": "2026-08-12T09:52:00-03:00",
+  "respondidaEm": "2026-08-18T11:37:00-03:00",
+
+  "solicitante": {
+    "vinculo": "PACIENTE",
+    "nome": "A. S. Lima",
+    "cpf": "000.000.000-00",
+    "email": "exemplo@exemplo.test",
+    "grauParentesco": null
+  },
+
+  "paciente": {
+    "nome": "A. S. Lima",
+    "cpf": "000.000.000-00",
+    "falecido": false
+  },
+
+  "documentoSolicitado": {
+    "tipo": "PRONTUARIO",
+    "abrangencia": "COMPLETO",
+    "periodoInicio": null,
+    "periodoFim": null
+  },
+
+  "anexos": [
+    {
+      "tipo": "SELFIE_COM_DOCUMENTO",
+      "enviadoEm": "2026-08-12T09:31:00-03:00",
+      "conferencia": "APROVADO",
+      "motivoRecusa": null
+    },
+    {
+      "tipo": "DOCUMENTO_FRENTE",
+      "enviadoEm": "2026-08-12T09:34:00-03:00",
+      "conferencia": "APROVADO",
+      "motivoRecusa": null
+    },
+    {
+      "tipo": "DOCUMENTO_VERSO",
+      "enviadoEm": "2026-08-12T09:36:00-03:00",
+      "conferencia": "RECUSADO",
+      "motivoRecusa": "Imagem cortada: os dados do rodape nao estao legiveis"
+    },
+    {
+      "tipo": "DOCUMENTO_VERSO",
+      "enviadoEm": "2026-08-12T09:48:00-03:00",
+      "conferencia": "APROVADO",
+      "motivoRecusa": null
+    },
+    {
+      "tipo": "TERMO_CONSENTIMENTO_ASSINADO",
+      "enviadoEm": "2026-08-12T09:50:00-03:00",
+      "conferencia": "APROVADO",
+      "motivoRecusa": null
+    }
+  ],
+
+  "resposta": {
+    "arquivo": "prontuario-completo.zip",
+    "disponivelAte": "2026-08-28T23:59:59-03:00",
+    "avisoVencimentoEnviadoEm": "2026-08-25T08:00:00-03:00",
+    "remocaoDefinitivaPrevistaPara": "2026-09-27",
+    "downloads": [
+      { "em": "2026-08-19T14:22:00-03:00", "por": "SOLICITANTE" }
+    ]
+  },
+
+  "prazos": {
+    "limiteRespostaSame": "2026-09-02",
+    "diasCorridosAteResposta": 6
+  }
+}
