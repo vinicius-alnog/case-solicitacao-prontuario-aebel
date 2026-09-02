@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1000" width="1200" height="1000" role="img" aria-label="Ciclo de vida da solicitação, do rascunho à remoção definitiva do arquivo">
+<style>text{font-family:Arial, Helvetica, sans-serif}</style>
+<rect x="0" y="0" width="1200" height="1000" fill="#FFFFFF"/>
+
+<!-- Cabeçalho -->
+<text x="60" y="88" font-size="14" fill="#08666B" font-weight="700" letter-spacing="1.7">CICLO DE VIDA · SOLICITAÇÃO</text>
+<text x="60" y="132" font-size="33" fill="#0F3A55" font-weight="700">Do rascunho ao arquivo removido</text>
+<text x="60" y="166" font-size="18" fill="#4A5863">Sete estados governam a solicitação, do primeiro campo preenchido à remoção definitiva.</text>
+<text x="60" y="191" font-size="18" fill="#4A5863">A fila de trabalho do SAME é a lista filtrável desses estados; seus indicadores são contagens derivadas deles.</text>
+
+<!-- Caminho normal -->
+<rect x="60" y="222" width="192" height="170" rx="10" fill="#FFFFFF" stroke="#D6E3EE" stroke-width="1"/>
+<text x="76" y="250" font-size="11.5" fill="#08666B" font-weight="700" letter-spacing="1.2">INÍCIO</text>
+<text x="76" y="278" font-size="16" fill="#0F3A55" font-weight="700">Rascunho</text>
+<text x="76" y="322" font-size="13" fill="#4A5863">Wizard em andamento.</text>
+<text x="76" y="340" font-size="13" fill="#4A5863">Pode ser retomado ou</text>
+<text x="76" y="358" font-size="13" fill="#4A5863">descartado. Expira por</text>
+<text x="76" y="376" font-size="13" fill="#4A5863">rotina se abandonado.</text>
+
+<path d="M258 307 L274 307" stroke="#C9D8E4" stroke-width="1.5" fill="none"/>
+<path d="M274 303 L281 307 L274 311 z" fill="#C9D8E4"/>
+
+<rect x="282" y="222" width="192" height="170" rx="10" fill="#FFFFFF" stroke="#D6E3EE" stroke-width="1"/>
+<text x="298" y="250" font-size="11.5" fill="#08666B" font-weight="700" letter-spacing="1.2">COM O SAME</text>
+<text x="298" y="278" font-size="16" fill="#0F3A55" font-weight="700">Em análise</text>
+<text x="298" y="322" font-size="13" fill="#4A5863">Enviada e protocolada.</text>
+<text x="298" y="340" font-size="13" fill="#4A5863">A equipe confere os</text>
+<text x="298" y="358" font-size="13" fill="#4A5863">documentos anexados.</text>
+
+<path d="M480 307 L496 307" stroke="#C9D8E4" stroke-width="1.5" fill="none"/>
+<path d="M496 303 L503 307 L496 311 z" fill="#C9D8E4"/>
+
+<rect x="504" y="222" width="192" height="170" rx="10" fill="#FFFFFF" stroke="#D6E3EE" stroke-width="1"/>
+<text x="520" y="250" font-size="11.5" fill="#08666B" font-weight="700" letter-spacing="1.2">COM O JURÍDICO</text>
+<text x="520" y="278" font-size="16" fill="#0F3A55" font-weight="700">Documentação</text>
+<text x="520" y="297" font-size="16" fill="#0F3A55" font-weight="700">aprovada</text>
+<text x="520" y="331" font-size="13" fill="#4A5863">Conferência concluída.</text>
+<text x="520" y="349" font-size="13" fill="#4A5863">Segue para auditoria</text>
+<text x="520" y="367" font-size="13" fill="#4A5863">do setor jurídico.</text>
+
+<path d="M702 307 L718 307" stroke="#C9D8E4" stroke-width="1.5" fill="none"/>
+<path d="M718 303 L725 307 L718 311 z" fill="#C9D8E4"/>
+
+<rect x="726" y="222" width="192" height="170" rx="10" fill="#FFFFFF" stroke="#D6E3EE" stroke-width="1"/>
+<text x="742" y="250" font-size="11.5" fill="#08666B" font-weight="700" letter-spacing="1.2">COM O SOLICITANTE</text>
+<text x="742" y="278" font-size="16" fill="#0F3A55" font-weight="700">Respondida</text>
+<text x="742" y="322" font-size="13" fill="#4A5863">Arquivo anexado e</text>
+<text x="742" y="340" font-size="13" fill="#4A5863">avisado por e-mail.</text>
+<text x="742" y="358" font-size="13" fill="#4A5863">Janela de download</text>
+<text x="742" y="376" font-size="13" fill="#4A5863">aberta.</text>
+
+<path d="M924 307 L940 307" stroke="#C9D8E4" stroke-width="1.5" fill="none"/>
+<path d="M940 303 L947 307 L940 311 z" fill="#C9D8E4"/>
+
+<rect x="948" y="222" width="192" height="170" rx="10" fill="#FFFFFF" stroke="#D6E3EE" stroke-width="1"/>
+<text x="964" y="250" font-size="11.5" fill="#08666B" font-weight="700" letter-spacing="1.2">ENCERRAMENTO</text>
+<text x="964" y="278" font-size="16" fill="#0F3A55" font-weight="700">Arquivo</text>
+<text x="964" y="297" font-size="16" fill="#0F3A55" font-weight="700">expirado</text>
+<text x="964" y="331" font-size="13" fill="#4A5863">Janela encerrada.</text>
+<text x="964" y="349" font-size="13" fill="#4A5863">Remoção definitiva</text>
+<text x="964" y="367" font-size="13" fill="#4A5863">por rotina agendada.</text>
+
+<!-- Ligação do estado que ramifica para a faixa de desvios -->
+<path d="M378 392 L378 412" stroke="#C9D8E4" stroke-width="1.5" fill="none"/>
+<path d="M374 412 L378 419 L382 412 z" fill="#C9D8E4"/>
+
+<!-- Desvios -->
+<rect x="60" y="420" width="1080" height="200" rx="10" fill="#F1F5F9"/>
+<text x="84" y="452" font-size="11.5" fill="#08666B" font-weight="700" letter-spacing="1.2">DESVIOS A PARTIR DA ANÁLISE</text>
+
+<rect x="84" y="474" width="502" height="124" rx="10" fill="#FFFFFF" stroke="#D6E3EE" stroke-width="1"/>
+<text x="108" y="500" font-size="11.5" fill="#08666B" font-weight="700" letter-spacing="1.2">RETORNA À ANÁLISE</text>
+<text x="108" y="526" font-size="16" fill="#0F3A55" font-weight="700">Aguardando correção</text>
+<text x="108" y="550" font-size="13.5" fill="#4A5863">Um anexo foi recusado, com o motivo registrado na trilha. O</text>
+<text x="108" y="568" font-size="13.5" fill="#4A5863">solicitante é avisado, reenvia o documento pelo portal e a</text>
+<text x="108" y="586" font-size="13.5" fill="#4A5863">solicitação volta para Em análise.</text>
+
+<rect x="614" y="474" width="502" height="124" rx="10" fill="#FFFFFF" stroke="#D6E3EE" stroke-width="1"/>
+<text x="638" y="500" font-size="11.5" fill="#08666B" font-weight="700" letter-spacing="1.2">ESTADO TERMINAL</text>
+<text x="638" y="526" font-size="16" fill="#0F3A55" font-weight="700">Cancelada</text>
+<text x="638" y="550" font-size="13.5" fill="#4A5863">Encerrada sem entrega. Pode vir do rascunho descartado pelo</text>
+<text x="638" y="568" font-size="13.5" fill="#4A5863">próprio solicitante ou da análise, quando o vínculo alegado</text>
+<text x="638" y="586" font-size="13.5" fill="#4A5863">não se comprova.</text>
+
+<!-- Indicadores derivados -->
+<text x="60" y="666" font-size="11.5" fill="#08666B" font-weight="700" letter-spacing="1.2">INDICADORES DA FILA · CONTAGENS DERIVADAS DOS ESTADOS</text>
+
+<rect x="60" y="684" width="228" height="112" rx="10" fill="#FFFFFF" stroke="#D6E3EE" stroke-width="1"/>
+<text x="84" y="716" font-size="16" fill="#0F3A55" font-weight="700">Pendentes</text>
+<text x="84" y="744" font-size="13" fill="#4A5863">Rascunho, em análise e</text>
+<text x="84" y="762" font-size="13" fill="#4A5863">aguardando correção.</text>
+
+<rect x="344" y="684" width="228" height="112" rx="10" fill="#FFFFFF" stroke="#D6E3EE" stroke-width="1"/>
+<text x="368" y="716" font-size="16" fill="#0F3A55" font-weight="700">Respondidas</text>
+<text x="368" y="744" font-size="13" fill="#4A5863">Arquivo entregue, com a</text>
+<text x="368" y="762" font-size="13" fill="#4A5863">janela ainda aberta.</text>
+
+<rect x="628" y="684" width="228" height="112" rx="10" fill="#FFFFFF" stroke="#D6E3EE" stroke-width="1"/>
+<text x="652" y="716" font-size="16" fill="#0F3A55" font-weight="700">Rejeitadas</text>
+<text x="652" y="744" font-size="13" fill="#4A5863">Canceladas, em qualquer</text>
+<text x="652" y="762" font-size="13" fill="#4A5863">ponto do caminho.</text>
+
+<rect x="912" y="684" width="228" height="112" rx="10" fill="#FFFFFF" stroke="#D6E3EE" stroke-width="1"/>
+<text x="936" y="716" font-size="16" fill="#0F3A55" font-weight="700">Fora do prazo</text>
+<text x="936" y="744" font-size="13" fill="#4A5863">Prazo legal de resposta</text>
+<text x="936" y="762" font-size="13" fill="#4A5863">estourado.</text>
+
+<!-- Ressalvas -->
+<text x="60" y="872" font-size="13.5" fill="#8A97A2">Diagrama conceitual desenhado para este repositório. Descreve o ciclo de vida no vocabulário do domínio, o mesmo que o solicitante acompanha no portal.</text>
+<text x="60" y="892" font-size="13.5" fill="#8A97A2">Não reproduz tela, layout nem disposição de nenhuma superfície do sistema. As telas de colaborador e de administrador não são divulgadas.</text>
+<text x="60" y="912" font-size="13.5" fill="#8A97A2">Um canal de tempo real sinaliza à equipe qual solicitação já está sendo atendida por outro colaborador, para que dois não trabalhem no mesmo pedido.</text>
+
+<rect x="0" y="954" width="1200" height="46" fill="#0073A9"/>
+<text x="60" y="982" font-size="13" fill="#FFFFFF" font-weight="700">Hospital Evangélico de Londrina · AEBEL</text>
+<text x="1140" y="982" font-size="12.5" fill="#BEDDEF" text-anchor="end">Ciclo de vida da solicitação</text>
+</svg>

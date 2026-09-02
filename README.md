@@ -173,11 +173,12 @@ do caminho mais exigente, o do representante legal que pede o prontuário de um 
 
 <img src="midia/interfaces/publico/wizard-representante.webp" alt="Folha de contato com as nove etapas do fluxo público de solicitação por representante legal" width="100%">
 
-As telas de colaborador e de administrador não podem ser divulgadas. A fila de trabalho do
-SAME aparece aqui **recriada**: reproduz a estrutura e a identidade visual da interface,
-com conteúdo inteiramente fictício.
+As telas de colaborador e de administrador não podem ser divulgadas, e não aparecem aqui
+nem recriadas: um mock fiel de uma tela que só abre com credencial não acrescenta nada ao
+relato e serviria de molde para uma página falsa. O que a fila do SAME organiza é o ciclo
+de vida da solicitação, e é isso que o diagrama mostra.
 
-<img src="midia/interfaces/fila-operacional.svg" alt="Fila de trabalho da equipe do SAME com indicadores, recriada com dados fictícios" width="100%">
+<img src="midia/ciclo-de-vida.svg" alt="Ciclo de vida da solicitação: sete estados, do rascunho à remoção definitiva do arquivo, e os indicadores derivados deles" width="100%">
 
 ---
 
@@ -192,9 +193,9 @@ com conteúdo inteiramente fictício.
 │   ├── antes-e-depois.svg           O processo anterior ao lado do processo digital
 │   ├── mapa-do-sistema.svg          Superfícies de acesso e integrações
 │   ├── entidades.svg                Entidades principais, em nomes genéricos
+│   ├── ciclo-de-vida.svg            Estados da solicitação e indicadores derivados
 │   └── interfaces/
-│       ├── publico/                 Capturas reais do fluxo público, dados inventados
-│       └── fila-operacional.svg     Tela restrita, recriada com dados fictícios
+│       └── publico/                 Capturas reais do fluxo público, dados inventados
 ├── registro/
 │   ├── 01-arquitetura.md            Camadas, superfícies de acesso e integrações
 │   ├── 02-protecao-de-dados.md      Retenção, auditoria e proteção de dado sensível

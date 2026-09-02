@@ -16,8 +16,9 @@ sistema, a instituição ou qualquer paciente.
   infraestrutura.**
 - **Dados de paciente**, em qualquer forma: nome, CPF, protocolo real, documento,
   prontuário, e-mail ou registro de atendimento.
-- **Capturas das telas restritas**: a fila de trabalho do SAME, o painel administrativo e
-  qualquer superfície que exija credencial institucional.
+- **As telas restritas**, em qualquer forma: a fila de trabalho do SAME, o painel
+  administrativo e qualquer superfície que exija credencial institucional. Nem captura,
+  nem mock fiel, nem reprodução do layout.
 - **Capturas de produção**, de qualquer superfície, inclusive da pública.
 
 ---
@@ -33,9 +34,12 @@ sistema, a instituição ou qualquer paciente.
   conteúdo. Nome, CPF, e-mail, vínculo, protocolo e usuário de acompanhamento são
   inventados, e os arquivos anexados são imagens sintéticas, não documentos de identidade.
   O CPF usado tem dígito verificador válido e nenhum paciente correspondente na base.
-- **As telas restritas** foram recriadas. Reproduzem a estrutura e a identidade visual da
-  interface, com conteúdo inteiramente inventado. Protocolos, iniciais, datas, contadores
-  e nomes de arquivo são fictícios.
+- **As telas restritas não aparecem, nem recriadas.** Houve uma versão anterior deste
+  repositório com um mock fiel da fila do SAME, e ela foi retirada: reproduzir com
+  precisão uma tela que só abre com credencial não acrescentava nada ao relato e servia de
+  molde para uma página falsa apontada à própria equipe. No lugar entrou
+  [`midia/ciclo-de-vida.svg`](../midia/ciclo-de-vida.svg), que descreve os estados da
+  solicitação e as contagens derivadas deles, sem desenhar interface.
 - **Os exemplos** em `amostras/` são inventados. Ilustram formato e vocabulário do
   domínio, não payloads reais e não o contrato real da API.
 
