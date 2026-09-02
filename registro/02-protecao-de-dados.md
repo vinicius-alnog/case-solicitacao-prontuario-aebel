@@ -35,14 +35,14 @@ valores abaixo são a política padrão do serviço, ajustável por ambiente.
 
 **A selfie e o documento de identidade existem apenas para confirmar identidade.**
 Encerrada a solicitação, são apagados junto com o resto. Não se acumulam como base de
-imagens — o que seria, de longe, o ativo mais perigoso que este sistema poderia criar.
+imagens, o que seria, de longe, o ativo mais perigoso que este sistema poderia criar.
 
 ---
 
 ## Trilha de auditoria
 
 Registra a ação, o autor, o momento e a origem. Vale tanto para a equipe do SAME quanto
-para o solicitante, e **inclui tentativas de acesso que falharam** — em geral a informação
+para o solicitante, e **inclui tentativas de acesso que falharam**, em geral a informação
 mais útil quando algo dá errado.
 
 A restrição que a torna confiável é ser **somente-inclusão no próprio banco**: nada pode
@@ -80,7 +80,7 @@ aberta, a troca corta esse acesso.
 
 ## Proteção da superfície pública
 
-A abertura da solicitação não pode exigir login — o solicitante ainda não tem cadastro. O
+A abertura da solicitação não pode exigir login, o solicitante ainda não tem cadastro. O
 que a protege:
 
 - **Limite de requisições por origem**, com tetos separados por tipo de operação.
@@ -90,11 +90,11 @@ que a protege:
 
 **Recuperação de acesso não revela se um CPF existe na base.** A resposta é sempre a
 mesma, exista ou não solicitação para aquele CPF. O contrário permitiria descobrir quem
-tem prontuário no hospital testando CPFs — que é, em si, uma revelação de dado de saúde.
+tem prontuário no hospital testando CPFs que é, em si, uma revelação de dado de saúde.
 
 Há uma exceção deliberada e documentada: a rota de retomada de rascunho por CPF
 **precisa** confirmar que existe um rascunho em andamento, porque essa é a função dela. O
-risco foi aceito com contenções explícitas — janela curta de validade do rascunho, teto
+risco foi aceito com contenções explícitas, janela curta de validade do rascunho, teto
 baixo de requisições por origem, toda tentativa auditada, e nenhum conteúdo de arquivo na
 resposta.
 
@@ -112,7 +112,7 @@ registrado é risco esquecido.
   sistema de arquivos, o que elimina a classe inteira de ataques por caminho.
 - **Armazenamento fora da área publicada.** Não existe URL que sirva o arquivo
   diretamente: todo acesso passa por uma rota que confere a quem o arquivo pertence.
-- **Registro de cada download**, com autor e momento — exatamente o que a entrega por link
+- **Registro de cada download**, com autor e momento, exatamente o que a entrega por link
   de mensageiro não produzia.
 
 ---
@@ -126,7 +126,7 @@ de subir em estado degradado.
 A lição aprendida na revisão pré-implantação foi estender esse rigor: **ausência de valor
 em uma configuração de segurança deve ser tratada como erro, nunca como padrão
 silencioso.** Um limitador que não limita e uma auditoria que grava sempre a mesma origem
-não quebram nenhum teste — apenas param de proteger.
+não quebram nenhum teste, apenas param de proteger.
 
 ---
 
@@ -134,7 +134,7 @@ não quebram nenhum teste — apenas param de proteger.
 
 Registrado para não gerar expectativa equivocada:
 
-- **Cobrança pelo serviço** — a etapa existe no fluxo e está desligada; nenhuma
+- **Cobrança pelo serviço** - a etapa existe no fluxo e está desligada; nenhuma
   solicitação é retida por falta de pagamento.
-- **Leitura automática de documentos (OCR)** — prevista, não implementada. A conferência
+- **Leitura automática de documentos (OCR)** - prevista, não implementada. A conferência
   documental é integralmente humana.

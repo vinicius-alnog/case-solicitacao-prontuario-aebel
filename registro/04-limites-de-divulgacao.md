@@ -16,7 +16,9 @@ sistema, a instituição ou qualquer paciente.
   infraestrutura.**
 - **Dados de paciente**, em qualquer forma: nome, CPF, protocolo real, documento,
   prontuário, e-mail ou registro de atendimento.
-- **Capturas de tela do sistema em operação.**
+- **Capturas das telas restritas**: a fila de trabalho do SAME, o painel administrativo e
+  qualquer superfície que exija credencial institucional.
+- **Capturas de produção**, de qualquer superfície, inclusive da pública.
 
 ---
 
@@ -25,14 +27,20 @@ sistema, a instituição ou qualquer paciente.
 - **Todos os diagramas** em `midia/` foram desenhados especificamente para este
   repositório. São representações conceituais: não reproduzem o desenho técnico interno,
   o modelo físico do banco nem a topologia real.
-- **Todas as telas** em `midia/interfaces/` foram recriadas. Reproduzem a estrutura e a
-  identidade visual das interfaces, com conteúdo inteiramente inventado — protocolos,
-  iniciais, datas, contadores e nomes de arquivo são fictícios.
+- **As telas do fluxo público** em `midia/interfaces/publico/` são capturas reais, feitas
+  no ambiente de **homologação**, nunca em produção. O fluxo de solicitação é aberto a
+  qualquer pessoa, então a tela em si não é informação reservada; o que foi controlado é o
+  conteúdo. Nome, CPF, e-mail, vínculo, protocolo e usuário de acompanhamento são
+  inventados, e os arquivos anexados são imagens sintéticas, não documentos de identidade.
+  O CPF usado tem dígito verificador válido e nenhum paciente correspondente na base.
+- **As telas restritas** foram recriadas. Reproduzem a estrutura e a identidade visual da
+  interface, com conteúdo inteiramente inventado. Protocolos, iniciais, datas, contadores
+  e nomes de arquivo são fictícios.
 - **Os exemplos** em `amostras/` são inventados. Ilustram formato e vocabulário do
   domínio, não payloads reais e não o contrato real da API.
 
-Onde há número de operação — 200 solicitações atendidas, tempo médio de 7 dias corridos,
-3 usuários institucionais — trata-se de indicador agregado, sem qualquer possibilidade de
+Onde há número de operação: 200 solicitações atendidas, tempo médio de 7 dias corridos,
+3 usuários institucionais, trata-se de indicador agregado, sem qualquer possibilidade de
 identificação individual.
 
 ---
@@ -40,7 +48,7 @@ identificação individual.
 ## Sobre os números do "antes"
 
 O tempo médio de aproximadamente 20 dias atribuído ao processo anterior é uma referência
-institucional, não uma medição instrumentada — a ausência de indicadores era parte do
+institucional, não uma medição instrumentada, a ausência de indicadores era parte do
 problema que o sistema veio resolver. Essa ressalva aparece junto de cada citação do
 número, no [README](../README.md) e no [case study](../ANALISE-TECNICA.md), para que ele não
 seja lido como resultado obtido sob medição controlada.

@@ -1,6 +1,6 @@
 # Arquitetura
 
-Detalhamento das camadas e integrações do Portal de Solicitação de Prontuário do SAME —
+Detalhamento das camadas e integrações do Portal de Solicitação de Prontuário do SAME do
 Hospital Evangélico de Londrina (AEBEL).
 
 Documento conceitual. Não reproduz código, nomes de rota, esquema real de banco,
@@ -23,7 +23,7 @@ abaixo**.
 | Helpers | Sessão, upload, limite por origem, agendamento e utilitários | Não decidem regra de negócio |
 
 O ganho concreto dessa disciplina aparece nos testes: um serviço pode ser exercitado sem
-subir servidor HTTP, e uma rota pode ser exercitada com o middleware real no caminho —
+subir servidor HTTP, e uma rota pode ser exercitada com o middleware real no caminho,
 que é o único jeito de testar de verdade o comportamento de upload e de sessão.
 
 ---
@@ -33,7 +33,7 @@ que é o único jeito de testar de verdade o comportamento de upload e de sessã
 O sistema não é uma API única com níveis de permissão. São três conjuntos de rotas, cada
 um com seu roteador e sua postura de segurança.
 
-### Abertura da solicitação — pública
+### Abertura da solicitação pública
 
 Aceita requisições de quem ainda não tem cadastro, porque não há alternativa: o
 solicitante chega ao sistema sem nunca ter passado por ele.
@@ -41,21 +41,21 @@ solicitante chega ao sistema sem nunca ter passado por ele.
 O que protege esta superfície:
 
 - **Limite de requisições por origem** em todas as rotas, com tetos separados por tipo de
-  operação — criar, enviar anexo, editar rascunho, retomar, ler anexo.
+  operação, criar, enviar anexo, editar rascunho, retomar, ler anexo.
 - **Credencial de posse do rascunho**, emitida uma única vez no momento da criação. É ela
   que autoriza continuar editando aquela solicitação.
 - **Protocolo imprevisível**, que identifica a solicitação, mas não autoriza nada por si.
 
-### Portal do solicitante — sessão própria
+### Portal do solicitante - sessão própria
 
 Credenciais geradas ao final da abertura e enviadas por e-mail, com troca obrigatória no
 primeiro acesso. A sessão é assinada com um segredo exclusivo deste público.
 
-Cada consulta reconfere o vínculo entre a sessão e a solicitação pedida — a verificação
+Cada consulta reconfere o vínculo entre a sessão e a solicitação pedida, a verificação
 está na camada de dados, não apenas na tela. Uma tela escondida não é um controle de
 acesso.
 
-### Área institucional — identidade do MV
+### Área institucional - identidade do MV
 
 O colaborador se autentica com a mesma matrícula que já usa no sistema de gestão
 hospitalar. A aplicação valida a credencial lá, lê o papel autorizado e emite uma sessão
@@ -71,7 +71,7 @@ consultam o segredo do outro público.
 
 1. **Entrada.** A aplicação lê o endereço de origem real da requisição, contando os saltos
    de proxy reverso configurados. Esse endereço alimenta o limitador e a trilha de
-   auditoria — os dois dependem dele estar correto.
+   auditoria, os dois dependem dele estar correto.
 2. **Limite por origem.** Rotas públicas passam por um limitador com teto próprio.
 3. **Sessão.** Nas superfícies autenticadas, a sessão é verificada contra o segredo daquele
    público específico.
@@ -117,7 +117,7 @@ uma linha órfã na tabela.
 18 telas em HTML, CSS e JavaScript, sem framework, organizadas em três conjuntos: fluxo
 público em etapas, portal do solicitante e painel administrativo.
 
-Seguem a identidade visual institucional — azul institucional como autoridade, turquesa
+Seguem a identidade visual institucional. Azul institucional como autoridade, turquesa
 como ação positiva, Arial, superfícies claras e cantos amplos. No celular, as tabelas
 administrativas se reorganizam em cards em vez de comprimir colunas, e a ação principal
 fica ao alcance do polegar, no fim do fluxo.

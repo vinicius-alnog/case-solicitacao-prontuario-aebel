@@ -1,7 +1,7 @@
 # Decisões técnicas
 
 Registro curto das escolhas de projeto e do motivo de cada uma. Cada entrada traz o que
-foi decidido, o que foi descartado e o que a decisão custou — porque decisão sem custo
+foi decidido, o que foi descartado e o que a decisão custou, porque decisão sem custo
 declarado é propaganda, não registro.
 
 ---
@@ -31,7 +31,7 @@ solicitante não é aceita na área institucional nem por engano de código.
 
 **Descartado.** Usar o protocolo como credencial de edição do rascunho.
 
-**Escolhido.** O protocolo identifica e circula — aparece no e-mail e é usado para falar
+**Escolhido.** O protocolo identifica e circula, aparece no e-mail e é usado para falar
 com o hospital. Uma credencial de posse separada, emitida uma única vez na criação e não
 recuperável, é o que autoriza continuar editando.
 
@@ -56,7 +56,7 @@ Nenhuma senha institucional armazenada por este sistema.
 
 **Por quê mesmo assim.** Um cadastro paralelo é uma segunda senha para gerenciar, um
 segundo lugar para revogar acesso no desligamento e uma segunda base para vazar. E se o
-MV está fora, o prontuário também está — não haveria o que responder de qualquer forma.
+MV está fora, o prontuário também está, não haveria o que responder de qualquer forma.
 
 ---
 
@@ -119,7 +119,7 @@ controlado pelo usuário é a porta de entrada de uma classe inteira de ataques 
 **Descartado.** Conferência manual periódica de prazos e limpeza.
 
 **Escolhido.** Rotinas diárias para expiração de rascunho, janela de download, aviso de
-vencimento e remoção definitiva — reconciliando disco contra banco.
+vencimento e remoção definitiva, reconciliando disco contra banco.
 
 **Custo.** Rotina agendada é código que roda sem ninguém olhando; exige registro da
 própria execução para ser auditável.

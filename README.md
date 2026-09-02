@@ -165,15 +165,17 @@ projeto cada uma com o custo que ela impôs em
 
 ---
 
-## Interfaces recriadas
+## Interfaces
 
-As telas abaixo foram **redesenhadas para este repositório**. Não são capturas do sistema
-em operação: reproduzem a estrutura e a identidade visual das interfaces com dados
-inteiramente fictícios, sem nome, CPF, protocolo ou documento real.
+O fluxo de solicitação é aberto ao público, então as telas abaixo são **capturas reais**,
+feitas no ambiente de homologação e preenchidas com dados inventados. São as nove etapas
+do caminho mais exigente, o do representante legal que pede o prontuário de um terceiro:
 
-<img src="midia/interfaces/solicitacao-em-etapas.svg" alt="Fluxo público de solicitação em etapas, recriado com dados fictícios" width="100%">
+<img src="midia/interfaces/publico/wizard-representante.webp" alt="Folha de contato com as nove etapas do fluxo público de solicitação por representante legal" width="100%">
 
-<img src="midia/interfaces/acompanhamento.svg" alt="Portal do solicitante acompanhando o andamento, recriado com dados fictícios" width="100%">
+As telas de colaborador e de administrador não podem ser divulgadas. A fila de trabalho do
+SAME aparece aqui **recriada**: reproduz a estrutura e a identidade visual da interface,
+com conteúdo inteiramente fictício.
 
 <img src="midia/interfaces/fila-operacional.svg" alt="Fila de trabalho da equipe do SAME com indicadores, recriada com dados fictícios" width="100%">
 
@@ -190,7 +192,9 @@ inteiramente fictícios, sem nome, CPF, protocolo ou documento real.
 │   ├── antes-e-depois.svg           O processo anterior ao lado do processo digital
 │   ├── mapa-do-sistema.svg          Superfícies de acesso e integrações
 │   ├── entidades.svg                Entidades principais, em nomes genéricos
-│   └── interfaces/                  Telas recriadas com dados fictícios
+│   └── interfaces/
+│       ├── publico/                 Capturas reais do fluxo público, dados inventados
+│       └── fila-operacional.svg     Tela restrita, recriada com dados fictícios
 ├── registro/
 │   ├── 01-arquitetura.md            Camadas, superfícies de acesso e integrações
 │   ├── 02-protecao-de-dados.md      Retenção, auditoria e proteção de dado sensível
@@ -211,10 +215,10 @@ contrato da API nem o esquema do banco.
 ## Quem participou
 
 O projeto foi conduzido dentro da equipe de Tecnologia da Informação da AEBEL.
-**Diego Silvino** contribuiu com desenvolvimento e apoio técnico ao longo da construção, e
+**Diego Silvino** contribuiu com desenvolvimento e apoio técnico ao longo da construção,
 **Pedro Porto** atuou como desenvolvedor revisor, avaliando a especificação e as decisões
-de implementação. A concepção do processo e a validação funcional envolveram a equipe do
-SAME e a área de negócio do hospital.
+de implementação e **Johanna Wilhelm** auxiliou também no processo de levantamento de requisições do projeto. 
+A concepção do processo e a validação funcional envolveram a equipe do SAME e a área de negócio do hospital.
 
 ---
 

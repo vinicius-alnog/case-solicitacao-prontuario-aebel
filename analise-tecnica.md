@@ -1,6 +1,6 @@
-# Case study — Portal de Solicitação de Prontuário do SAME
+# Case study - Portal de Solicitação de Prontuário do SAME
 
-**Hospital Evangélico de Londrina — AEBEL**
+**Hospital Evangélico de Londrina - AEBEL**
 
 | Campo | Informação |
 |---|---|
@@ -79,12 +79,12 @@ posturas de segurança distintas**, cada um com seu próprio roteador, em vez de
 O ganho não é organizacional, é de contenção. Segredos de assinatura separados por
 público significam que uma sessão de solicitante não é aceita como sessão institucional,
 nem por engano de código: os dois conjuntos de rotas nem sequer consultam o mesmo
-segredo. E o boot da aplicação recusa subir se esses segredos não passarem na validação —
+segredo. E o boot da aplicação recusa subir se esses segredos não passarem na validação,
 não existe o estado intermediário de "no ar com configuração pela metade".
 
 O custo é duplicação: middlewares e validações parecidas em três lugares. Foi um custo
-aceito conscientemente, porque a alternativa — um middleware genérico decidindo permissão
-por um campo do token — coloca a segurança inteira do sistema em um único ponto de
+aceito conscientemente, porque a alternativa que seria um middleware genérico decidindo permissão
+por um campo do token, colocaria a segurança inteira do sistema em um único ponto de
 falha lógica.
 
 ### 3.2. O protocolo é identificador, não credencial
@@ -93,29 +93,29 @@ A etapa de abertura precisa aceitar requisições de quem ainda não tem sessão
 é: o que autoriza a pessoa a continuar editando aquele rascunho?
 
 A resposta foi separar as duas coisas. O **protocolo** é o número que identifica a
-solicitação do começo ao fim — aparece no e-mail, o solicitante usa para falar com o
+solicitação do começo ao fim, aparece no e-mail, o solicitante usa para falar com o
 hospital, e por isso circula. O que autoriza a edição do rascunho é uma **credencial de
 posse emitida uma única vez na criação**, que não circula e não é recuperável.
 
-Se as duas coisas fossem a mesma, qualquer pessoa com o número do protocolo — inclusive
-quem visse o e-mail por cima do ombro — poderia alterar a solicitação de outra.
+Se as duas coisas fossem a mesma, qualquer pessoa com o número do protocolo, inclusive
+quem visse o e-mail por cima do ombro, poderia alterar a solicitação de outra.
 
 ### 3.3. Autenticação institucional delegada ao MV
 
 O colaborador entra com a mesma matrícula que já usa no sistema de gestão hospitalar. O
-portal valida a credencial lá e lê dali o papel que autoriza o acesso — colaborador ou
+portal valida a credencial lá e lê dali o papel que autoriza o acesso: colaborador ou
 administrador. **Nenhuma senha institucional é armazenada por este sistema.**
 
 O efeito prático aparece no desligamento de um funcionário: o acesso ao portal termina
 junto com o acesso ao MV, sem depender de alguém lembrar de revogar em um segundo lugar.
 
 O trade-off é a dependência: se o MV estiver fora, a área institucional não autentica. Foi
-aceito porque, se o MV está fora, o prontuário também está — a equipe do SAME não teria o
+aceito porque, se o MV está fora, o prontuário também está, a equipe do SAME não teria o
 que responder de qualquer forma.
 
 ### 3.4. Trilha de auditoria somente-inclusão, imposta no banco
 
-A auditoria registra a ação, o autor, o momento e a origem — e inclui **tentativas de
+A auditoria registra a ação, o autor, o momento e a origem, e inclui **tentativas de
 acesso que falharam**, que costumam ser a informação mais útil quando algo dá errado.
 
 A restrição que a torna útil é ela ser somente-inclusão no próprio banco: **nada pode ser
@@ -125,7 +125,7 @@ corrigir é uma trilha que a aplicação consegue adulterar, e aí ela não prov
 Isso tem uma consequência incômoda que vale registrar honestamente: quando um defeito de
 configuração fez a aplicação gravar a origem errada por algumas semanas (ver §6), as
 entradas antigas **não puderam ser consertadas**. Ficaram com o valor errado e uma nota
-explicando o artefato. Esse é exatamente o preço da garantia — e pagá-lo foi a decisão
+explicando o artefato. Esse é exatamente o preço da garantia e pagá-lo foi a decisão
 certa.
 
 ### 3.5. Validação de anexo pelo conteúdo, não pela extensão
@@ -137,7 +137,7 @@ qualquer dessas checagens é recusado na hora e não chega a ser guardado.
 Além disso, **o nome com que o arquivo é gravado é gerado pelo servidor**. Nada do que o
 solicitante digita chega ao sistema de arquivos, o que elimina de uma vez a classe inteira
 de ataques por caminho de arquivo. E o diretório de armazenamento fica fora da área
-publicada na internet: não existe URL que sirva o arquivo diretamente — todo acesso passa
+publicada na internet: não existe URL que sirva o arquivo diretamente, todo acesso passa
 por uma rota que confere a quem aquele arquivo pertence.
 
 ### 3.6. Ciclo de vida por rotina agendada, não por disciplina humana
@@ -170,7 +170,7 @@ com muito mais interatividade, a conta inverteria.
 
 ### 3.8. Contrato OpenAPI estático, sem interface de documentação servida
 
-O contrato das rotas é mantido como documento OpenAPI versionado junto do código — mas a
+O contrato das rotas é mantido como documento OpenAPI versionado junto do código, mas a
 aplicação **não serve uma interface de documentação navegável**. Isso evita adicionar
 dependência em tempo de execução e, principalmente, evita publicar o mapa completo da API
 em uma rota acessível.
@@ -191,7 +191,7 @@ anexos enviados, o arquivo de resposta e o registro de cada download.
 **Os catálogos de domínio.** Situação da solicitação, tipo de solicitação, tipo de
 documento e ação auditável são tabelas, não constantes no código. O motivo é operacional:
 uma situação nova, ou um novo tipo de documento atendido pelo SAME, não deveria exigir
-implantação de código — e a integridade referencial garante que nenhum registro fique com
+implantação de código e a integridade referencial garante que nenhum registro fique com
 um valor que o sistema não sabe interpretar.
 
 **O registro do que aconteceu.** A trilha de auditoria e o histórico de e-mails enviados,
@@ -216,14 +216,13 @@ distintos, e essa separação foi deliberada:
 
 - **Recusa** devolve a solicitação ao solicitante indicando exatamente o que reenviar e
   por quê. Ele reenvia apenas o item recusado, pelo portal, e a solicitação volta sozinha
-  para a fila quando não resta pendência — sem ninguém precisar recolocá-la lá.
+  para a fila quando não resta pendência, sem ninguém precisar recolocá-la lá.
 - **Cancelamento** encerra o caso com justificativa registrada, quando a documentação não
   permite seguir.
 
 **Uma solicitação em andamento por CPF.** Se a pessoa começa uma nova sem concluir a
-anterior, a anterior é encerrada automaticamente e isso fica registrado. A alternativa —
-permitir várias — produziria uma fila de rascunhos duplicados que a equipe teria que
-desempatar manualmente.
+anterior, a anterior é encerrada automaticamente e isso fica registrado. A alternativa (permitir várias) 
+produziria uma fila de rascunhos duplicados que a equipe teria que desempatar manualmente.
 
 **Sinalização em tempo real na fila.** Um canal de tempo real marca a solicitação que já
 está aberta por outro colaborador. Com três pessoas trabalhando na mesma fila, o problema
@@ -250,11 +249,11 @@ Dois efeitos, ambos silenciosos:
 - **Os limitadores por origem viravam um balde único.** Como o limite é contado por
   endereço de origem, e todas as requisições apresentavam o mesmo, o contador passou a ser
   global. Na prática: alguém esgotaria o limite de tentativas de login e **ninguém mais no
-  hospital conseguiria entrar** pelo período seguinte — negação de serviço trivial, e ao
+  hospital conseguiria entrar** pelo período seguinte, negação de serviço trivial, e ao
   mesmo tempo nenhuma contenção real contra quem estivesse atacando.
 
 Vale registrar a assimetria que escondeu o defeito: o código já avisava quando essa
-configuração estava permissiva demais, e ficava calado quando estava ausente — que era o
+configuração estava permissiva demais, e ficava calado quando estava ausente, que era o
 caso perigoso. O alerta apontava para o lado errado.
 
 A revisão encontrou outras assimetrias do mesmo tipo: uma proteção presente em um lugar e
@@ -268,7 +267,7 @@ que uma revisão sistemática encontra e uma leitura casual não.
 - **42 arquivos de teste automatizado**, divididos entre teste de rota, com o middleware
   real no caminho, e teste de unidade de serviços e utilitários.
 - **Os testes de upload exercitam o middleware de verdade**, gravando arquivo em disco.
-  Testar upload contra um middleware simulado testa a simulação, não o comportamento — e
+  Testar upload contra um middleware simulado testa a simulação, não o comportamento e
   o comportamento é justamente onde estão as decisões de segurança.
 - **Roteiros de fumaça separados da suíte**, para verificar integrações reais sob comando
   explícito, sem tornar a suíte dependente de serviço externo.
@@ -286,11 +285,11 @@ que uma revisão sistemática encontra e uma leitura casual não.
 | Rastreabilidade | Inexistente | Trilha somente-inclusão de ponta a ponta |
 | Retenção de documentos | Sem prazo definido | Prazos aplicados por rotina diária |
 | Indicadores de operação | Inexistentes | Painel com fila, pendências e prazos |
-| Solicitações atendidas | — | 200 desde agosto de 2026 |
+| Solicitações atendidas | - | 200 desde agosto de 2026 |
 | Equipe de operação | 3 pessoas | 3 pessoas |
 
 **Ressalva metodológica.** Os 20 dias do processo anterior são referência institucional, e
-não medição instrumentada — a ausência de indicadores era parte do problema que o sistema
+não medição instrumentada, a ausência de indicadores era parte do problema que o sistema
 veio resolver. Os 7 dias são apurados sobre os registros do sistema atual. A comparação
 indica ordem de grandeza, não resultado obtido sob medição controlada.
 
@@ -302,7 +301,7 @@ indica ordem de grandeza, não resultado obtido sob medição controlada.
   nenhuma solicitação é retida por falta de pagamento. Deixar a etapa estruturada e
   dormente custa pouco; refazer o fluxo depois para encaixá-la custaria muito.
 - **Leitura automática de documentos (OCR).** Prevista, não implementada. A conferência
-  documental é integralmente humana — o que, para validação de identidade, é a postura
+  documental é integralmente humana, o que, para validação de identidade, é a postura
   conservadora correta.
 - **Retomada de solicitação após a expiração da sessão.** O rascunho abandonado vence e
   seus anexos são removidos. Reter documento de identidade por mais tempo para conveniência
@@ -323,5 +322,5 @@ não em uma revisão semanas depois. A lição é generalizável: **ausência de
 configuração de segurança deve ser tratada como erro, nunca como padrão silencioso.**
 
 **Investir mais cedo em teste de integração da conferência documental.** É o ponto do
-fluxo com mais estados possíveis — aprovado, recusado item a item, reenviado
-parcialmente, cancelado — e foi onde o teste manual mais custou tempo.
+fluxo com mais estados possíveis: aprovado, recusado item a item, reenviado
+parcialmente, cancelado e foi onde o teste manual mais custou tempo.

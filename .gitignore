@@ -1,0 +1,9 @@
+# Capturas individuais do fluxo público e o fonte da montagem.
+#
+# A folha de contato midia/interfaces/publico/wizard-representante.webp é versionada e é
+# o que o README exibe. Os PNGs por etapa somam alguns megabytes e não acrescentam nada
+# que a folha já não mostre, então ficam apenas na máquina de quem captura. Para refazer
+# a folha depois de recapturar uma etapa, abra _folha-de-contato.html no navegador e
+# fotografe a página inteira.
+midia/interfaces/publico/passos/
+midia/interfaces/publico/_folha-de-contato.html
