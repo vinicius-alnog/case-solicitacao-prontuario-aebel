@@ -52,7 +52,7 @@ corrigir é uma trilha que a aplicação consegue adulterar.
 Isso tem um preço, e ele foi pago: quando um defeito de configuração fez a aplicação
 gravar a origem errada durante algumas semanas, as entradas afetadas não puderam ser
 consertadas. Ficaram com o valor incorreto e uma nota explicando o artefato. O caso está
-descrito em [`../ANALISE-TECNICA.md`](../ANALISE-TECNICA.md), na seção de auditoria técnica.
+descrito em [`../analise-tecnica.md`](../analise-tecnica.md), na seção de auditoria técnica.
 
 Acesso à trilha é restrito ao perfil administrador.
 

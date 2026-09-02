@@ -155,7 +155,7 @@ prazo termina.
 <img src="midia/mapa-do-sistema.svg" alt="Arquitetura simplificada: três superfícies de acesso, API, Oracle, MV, SMTP, armazenamento e rotinas agendadas" width="100%">
 
 O detalhamento das camadas, do isolamento entre superfícies e do modelo de dados está em
-[`ANALISE-TECNICA.md`](ANALISE-TECNICA.md) e em [`registro/01-arquitetura.md`](registro/01-arquitetura.md). A
+[`analise-tecnica.md`](analise-tecnica.md) e em [`registro/01-arquitetura.md`](registro/01-arquitetura.md). A
 postura de retenção, auditoria e proteção de dados está em
 [`registro/02-protecao-de-dados.md`](registro/02-protecao-de-dados.md), e o registro das escolhas de
 projeto cada uma com o custo que ela impôs em

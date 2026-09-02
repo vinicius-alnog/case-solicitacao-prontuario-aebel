@@ -54,7 +54,7 @@ identificação individual.
 O tempo médio de aproximadamente 20 dias atribuído ao processo anterior é uma referência
 institucional, não uma medição instrumentada, a ausência de indicadores era parte do
 problema que o sistema veio resolver. Essa ressalva aparece junto de cada citação do
-número, no [README](../README.md) e no [case study](../ANALISE-TECNICA.md), para que ele não
+número, no [README](../README.md) e no [case study](../analise-tecnica.md), para que ele não
 seja lido como resultado obtido sob medição controlada.
 
 ---
